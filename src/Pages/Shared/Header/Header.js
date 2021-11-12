@@ -1,8 +1,10 @@
-import { AppBar, Button, Icon, Typography } from '@mui/material'
+import { AppBar, Button, Container, Icon, Typography } from '@mui/material'
 import React from 'react'
 import useAuth from '../../../hooks/useAuth'
 import { Link } from 'react-router-dom'
 import { Box } from '@mui/system'
+import logo from '../../../images/designpics/logo.png'
+
 
 const Header = (props) => {
 
@@ -15,7 +17,11 @@ const Header = (props) => {
     }
 
     return (
-        <AppBar>
+        <AppBar
+            sx={{
+                backgroundColor: 'white'
+            }}
+        >
             <Box
                 component="nav"
 
@@ -24,11 +30,26 @@ const Header = (props) => {
                     backgroundImage: 'linear-gradient(to top right, #e3b3e8, #e8b3c4, #d5b3e8)',
                     display: 'flex',
                     justifyContent: 'center',
-                    opacity: .8,
-
                 }}
             >
                 {props.children}
+
+                <Box
+                    sx={{
+                        position: 'absolute',
+                        left: 50,
+                        height: 130,
+                    }}
+                >
+                    <img
+                        style={{
+                            height: '100%',
+
+                            objectFit: 'cover'
+                        }}
+                        src={logo} alt="" />
+                </Box>
+
 
                 <Box sx={{
                     display: 'flex',
@@ -47,51 +68,57 @@ const Header = (props) => {
                 </Box>
             </Box>
 
+            <Container>
+
+                <Box
+                    component="nav"
 
 
-            <Box
-
-                sx={{
-                    display: 'flex',
-                    justifyContent: 'right',
-                    alignItems: 'center',
-                    pr: 2,
-                    borderBottom: 2,
-                    height: 30,
-                    backgroundColor: 'white'
-                }}>
-
-                {!user.displayName &&
-                    <Link style={linkStyle} to='/login'>
-                        <Typography sx={linkTextStyle}>Login</Typography>
-                    </Link>
-                }
-                {user.displayName &&
-                    <Box sx={{
+                    sx={{
                         display: 'flex',
-                        justifyContent: 'center',
+                        justifyContent: 'right',
                         alignItems: 'center',
-
+                        borderBottom: 2,
+                        height: 30,
+                        backgroundColor: 'white'
                     }}>
-                        <Typography variant='caption' display="block" sx={{ color: 'gray' }}>Logged In as : {user.displayName}</Typography>
 
-                        {admin && <Link style={linkStyle} to='/admin'>
-                            <Typography display="block" sx={linkTextStyle}>Admin Page</Typography>
-                        </Link>}
+                    {!user.displayName &&
+                        <Link style={linkStyle} to='/login'>
+                            <Typography sx={linkTextStyle}>Login</Typography>
+                        </Link>
+                    }
+                    {user.displayName &&
+                        <Box sx={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
 
-                        {!admin &&  <Link style={linkStyle} to='/dashboard'>
-                            <Typography display="block" sx={linkTextStyle}>My Dashboard</Typography>
-                        </Link>}
+                        }}>
+                            <Typography variant='caption' display="block" sx={{ color: 'gray' }}>Logged In as: {user.displayName}</Typography>
 
-                        <Button onClick={logOut}>
-                            <Icon baseClassName="fas" className="fa-sign-out-alt" />
-                        </Button>
+                            {admin && <Link style={linkStyle} to='/admin'>
+                                <Typography display="block" sx={linkTextStyle}>Admin Page</Typography>
+                            </Link>}
 
-                    </Box>
+                            {!admin && <Link style={linkStyle} to='/dashboard'>
+                                <Typography display="block" sx={linkTextStyle}>My Dashboard</Typography>
+                            </Link>}
 
-                }
-            </Box>
-        </AppBar>
+                            <Button onClick={logOut}>
+                                <Icon baseClassName="fas" className="fa-sign-out-alt" />
+                            </Button>
+
+                        </Box>
+
+                    }
+
+
+                </Box>
+            </Container>
+
+
+        </AppBar >
     )
 }
 
