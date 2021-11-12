@@ -8,37 +8,7 @@ import Slide from '@mui/material/Slide';
 
 const ReviewShowTotal = () => {
     const [fewReviews, setFewReviews] = useState([])
-    const [reviewPage, setReviewPage] = useState(0)
-    const pageCount = (Math.ceil(fewReviews.length / 2))
-    const [checked, setChecked] = React.useState(false);
-    const [checkedAlt, setCheckedAlt
-    ] = React.useState(false);
-
-    useEffect(() => {
-        setTimeout(() => { (reviewPage + 1 < pageCount) ? setReviewPage(reviewPage + 1) : setReviewPage(0) }, 4000)
-        if (reviewPage % 2 === 0) {
-            setChecked(true)
-            setCheckedAlt(false)
-        } else {
-            setChecked(false)
-            setCheckedAlt(true)
-
-        }
-    }, [reviewPage, pageCount])
-
-    let pageItemsAlternate = []
-
-    fewReviews.map((item, index) => {
-       if ((index === (reviewPage * 2) + 2) || (index === (reviewPage * 2) + 3)) {
-            pageItemsAlternate.push(item)
-        } else if (reviewPage + 1 === pageCount) {
-            if (index === 0 || index === 1) { pageItemsAlternate.push(item) }
-        }
-
-        return null
-    })
-
-
+  
     useEffect(() => {
 
         fetch(`${serverLocation}review?limit=6`)
@@ -74,7 +44,7 @@ const ReviewShowTotal = () => {
                     height: 360
                 }}
             >
-                <Slide direction="right" in={checked} mountOnEnter unmountOnExit>
+                <Slide direction="right" in={true} mountOnEnter unmountOnExit>
                     <Box
                         sx={{
                             display: 'flex',
@@ -84,29 +54,13 @@ const ReviewShowTotal = () => {
                     >
 
                         {
-                            pageItemsAlternate.map(reviewedItem => <ReviewItemCard key={reviewedItem._id} reviewedItem={reviewedItem}></ReviewItemCard>)
+                            fewReviews.map(reviewedItem => <ReviewItemCard key={reviewedItem._id} reviewedItem={reviewedItem}></ReviewItemCard>)
                         }
 
                     </Box>
 
                 </Slide>
-                <Slide direction="left" in={checkedAlt} mountOnEnter unmountOnExit>
-
-
-                    <Box
-                        sx={{
-                            display: 'flex',
-                            justifyContent: 'center',
-                            mb: 5,
-                        }}
-                    >
-
-                        {
-                            pageItemsAlternate.map(reviewedItem => <ReviewItemCard key={reviewedItem._id} reviewedItem={reviewedItem}></ReviewItemCard>)
-                        }
-
-                    </Box>
-                </Slide>
+               
 
             </Box>
         </>
