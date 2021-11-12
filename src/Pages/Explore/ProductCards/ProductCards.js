@@ -131,11 +131,16 @@ const ProductCards = ({ product }) => {
                         textDecoration: 'none',
                     }}
                     to={`/ordersconfirmation/${_id}`}>
-                    <Button variant="contained"  size="large">Order Now</Button>
-                </Link>
-            </CardActions>
+                    <Button
+                        sx={{
+                            backgroundColor: 'hotpink',
+                            "&:hover": {backgroundColor: 'purple'}
+                        }}
+                        variant="contained" size="large">Order Now</Button>
+            </Link>
+        </CardActions>
 
-        </Card>
+        </Card >
     )
 }
 

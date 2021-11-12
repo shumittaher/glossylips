@@ -1,4 +1,4 @@
-import { Button,  Typography } from '@mui/material'
+import { Button, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -48,7 +48,7 @@ const Banner = () => {
                     width: '100%',
                     backgroundImage: 'linear-gradient(to top right, #e3b3e8, #e8b3c4, #d5b3e8)',
                     color: 'white',
-                    py: 1
+                    py: 3
                 }}
             >
 
@@ -61,7 +61,12 @@ const Banner = () => {
                         textDecoration: 'none'
                     }}
                     to="/explore">
-                    <Button variant="contained" size="large">
+                    <Button
+                        sx={{
+                            backgroundColor: 'hotpink',
+                            "&:hover": { backgroundColor: 'purple' }
+                        }}
+                        variant="contained" size="large">
                         Explore More
                     </Button>
                 </Link>
