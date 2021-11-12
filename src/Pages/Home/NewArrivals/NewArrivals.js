@@ -23,7 +23,6 @@ const NewArrivals = () => {
                     backgroundImage: 'linear-gradient(to top right, #e3b3e8, #e8b3c4, #d5b3e8)',
                     color: 'white',
                     py: 5,
-                    my: 4
                 }}
             >
                 <Typography variant='h3' gutterBottom>

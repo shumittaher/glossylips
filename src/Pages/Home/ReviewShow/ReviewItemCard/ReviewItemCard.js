@@ -24,15 +24,15 @@ const ReviewItemCard = ({ reviewedItem }) => {
             sx={{
                 display: 'flex',
                 width: 400,
-                height: 300,
-                mx:2
+                height: 320,
+                
             }}
         >
             <Box sx={{
                 display: 'flex',
                 justifyContent: 'center',
                 width: 200,
-                height: 300,
+                height: 320,
                 overflow: 'hidden'
             }}>
                 <img style={{
