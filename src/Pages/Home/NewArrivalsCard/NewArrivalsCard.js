@@ -105,6 +105,7 @@ const NewArrivalsCard = ({ itemID }) => {
                             </Typography>
 
                             <Typography sx={{
+                                fontFamily: 'Architects Daughter, cursive'
                             }}
                                 align='left' variant="body1" display="inline" gutterBottom>
                                 {newArrivalItem.brand}
@@ -126,6 +127,7 @@ const NewArrivalsCard = ({ itemID }) => {
                             </Typography>
 
                             <Typography sx={{
+                                fontFamily: 'Architects Daughter, cursive'
                             }}
                                 align='left' variant="body1" display="inline" gutterBottom>
                                 {newArrivalItem.type}

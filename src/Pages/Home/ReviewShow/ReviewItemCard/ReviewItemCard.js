@@ -25,7 +25,7 @@ const ReviewItemCard = ({ reviewedItem }) => {
                 display: 'flex',
                 width: 400,
                 height: 320,
-                
+
             }}
         >
             <Box sx={{
@@ -46,7 +46,12 @@ const ReviewItemCard = ({ reviewedItem }) => {
                 p: 2
             }}>
 
-                <Typography variant='h6'>
+                <Typography
+                    sx={{
+                        fontFamily: 'Architects Daughter, cursive'
+                    }}
+
+                    variant='h6'>
                     {underlyingProduct.productTitle?.toUpperCase()}
                 </Typography>
 
@@ -64,18 +69,61 @@ const ReviewItemCard = ({ reviewedItem }) => {
                         <Typography
                             variant='body2'
                             align='left' gutterBottom>
-                            Brand: {underlyingProduct.brand}
+
+                            <span
+                                style={{
+                                    fontWeight: 600,
+                                    fontFamily: 'Genos, sans-serif',
+                                    marginLeft: '10px'
+
+                                }}
+                            >
+
+                                Brand:
+                            </span>
+                            <span
+                                style={{
+                                    fontFamily: 'Architects Daughter, cursive', marginLeft: '10px'
+
+                                }}
+                            >
+                                {underlyingProduct.brand}
+                            </span>
                         </Typography>
 
                         <Typography
                             variant='body2'
                             align='left' gutterBottom>
-                            Type: {underlyingProduct.type}
+                            <span
+                                style={{
+                                    fontWeight: 600,
+                                    fontFamily: 'Genos, sans-serif',
+                                    marginLeft: '10px'
+
+                                }}
+                            >
+
+                                Type:
+                            </span>
+                            <span
+                                style={{
+                                    fontFamily: 'Architects Daughter, cursive',
+                                    marginLeft: '10px'
+                                }}
+                            >
+                                {underlyingProduct.type}
+                            </span>
+
                         </Typography>
                         <Box sx={{
                             display: 'flex',
                         }}>
-                            < Typography
+                            < Typography style={{
+                                fontWeight: 600,
+                                fontFamily: 'Genos, sans-serif',
+                                marginLeft: '10px'
+
+                            }}
                                 variant='body2'
                                 align='left' gutterBottom>
                                 Color:
@@ -106,8 +154,11 @@ const ReviewItemCard = ({ reviewedItem }) => {
 
                             <Typography
                                 sx={{
+                                    fontFamily: 'Caveat, cursive',
+                                    fontSize: '1.5em',
                                     my: 2,
-                                    textOverflow: 'ellipsis'
+                                    textOverflow: 'ellipsis',
+
                                 }}
                                 variant='body2' component='div' textAlign='center'>
                                 {reviewedItem.userComment}
@@ -116,7 +167,11 @@ const ReviewItemCard = ({ reviewedItem }) => {
                         </Box>
 
 
-                        <Typography variant='caption' component='div' textAlign='right'>
+                        <Typography
+                            sx={{
+                                fontFamily: 'Genos, sans-serif',
+                            }}
+                            variant='caption' component='div' textAlign='right'>
                             -  {reviewedItem.ratingGivenBy}
                         </Typography>
 

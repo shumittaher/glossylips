@@ -64,6 +64,7 @@ const ProductCards = ({ product }) => {
                         </Typography>
 
                         <Typography sx={{
+                            fontFamily: 'Architects Daughter, cursive'
                         }}
                             align='left' variant="button" display="inline" >
                             {brand}
@@ -86,7 +87,7 @@ const ProductCards = ({ product }) => {
                         </Typography>
 
                         <Typography sx={{
-
+fontFamily: 'Architects Daughter, cursive'
                         }}
                             align='left' variant="button" display="inline" >
                             {type}
@@ -108,6 +109,7 @@ const ProductCards = ({ product }) => {
                         </Typography>
 
                         <Typography sx={{
+                            fontFamily: 'Architects Daughter, cursive'
                         }}
                             align='left' variant="button" display="inline" >
                             BDT   {price}
