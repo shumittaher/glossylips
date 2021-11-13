@@ -1,4 +1,4 @@
-import { Typography, Button, Grid, Container } from '@mui/material';
+import { Typography, Button,  } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useState, useEffect } from 'react'
 import ReviewItemCard from '../ReviewItemCard/ReviewItemCard';
@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
 import { useTheme } from '@mui/material/styles';
 import model from '../../../../images/designpics/model.png'
+import glamourbackground from '../../../../images/designpics/glamourbackground.jpg'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
@@ -101,6 +102,7 @@ const ReviewShowTotal = () => {
                     mx: 'auto',
                     display: 'flex',
                     justifyContent: 'end',
+                    alignItems: 'center',
                     flexWrap: 'wrap'
                 }}
             >
@@ -158,15 +160,25 @@ const ReviewShowTotal = () => {
 
                 <Box sx={{
                     display: 'flex',
-                    justifyContent: 'end',
+                    justifyContent: 'center',
                     width: '50%',
                     height: 400,
-                    backgroundColor: 'black'
+                    backgroundImage: `url(${glamourbackground})`,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: '400px 400px',
+                    backgroundPosition: 'right',
+
                 }}>
 
                     <img
+                        className="glampic"
                         style={{
-                            objectFit: 'stretch'
+                            objectFit: 'cover',
+                            borderColor: 'red',
+                            borderWidth: '15px',
+                            borderStyle: 'solid',
+                            backgroundColor: 'black',
+                            transform: 'rotate(5deg)'
                         }}
                         src={model} alt="" />
 
