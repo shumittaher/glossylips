@@ -1,6 +1,7 @@
-import { Icon, Typography, Container } from '@mui/material'
+import { Icon, Typography, Container, Divider } from '@mui/material'
 import { Box } from '@mui/system'
 import React from 'react'
+import logo from '../../../images/designpics/logo.png'
 
 const Footer = () => {
     return (
@@ -15,6 +16,8 @@ const Footer = () => {
             <Container
                 sx={{
                     display: 'flex',
+                    flexDirection: { xs: 'column', md: 'row' },
+
                     justifyContent: 'space-around'
                 }}
             >
@@ -28,7 +31,13 @@ const Footer = () => {
                 >
                     <Typography variant='h3'>ABOUT US</Typography>
 
-                    {/* <img src={logo} alt="" /> */}
+                    <img
+                        style={{
+                            height: 100,
+                            width: "100%",
+                            objectFit: 'cover'
+                        }}
+                        src={logo} alt="" />
 
                     <Box
                         sx={{
@@ -54,7 +63,9 @@ const Footer = () => {
                         3131 Gulshan Ave. Dhaka, Bangladesh <br />
                         Complaints/Enquiries: (Email) glossy@lips.com
                     </Typography>
-
+                    <br />
+                    <Divider />
+                    <br />
                 </Box>
                 <Box
                     sx={{

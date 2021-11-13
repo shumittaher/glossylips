@@ -1,4 +1,4 @@
-import { Typography, Button,  } from '@mui/material';
+import { Typography, Button, } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useState, useEffect } from 'react'
 import ReviewItemCard from '../ReviewItemCard/ReviewItemCard';
@@ -101,7 +101,7 @@ const ReviewShowTotal = () => {
                     height: '100%',
                     mx: 'auto',
                     display: 'flex',
-                    justifyContent: 'end',
+                    justifyContent: { xs: 'center', md: 'end' },
                     alignItems: 'center',
                     flexWrap: 'wrap'
                 }}
@@ -109,15 +109,19 @@ const ReviewShowTotal = () => {
 
 
                 <Box sx={{
-                    my: 4,
+                    my: { xs: 0, md: 4 },
                     height: 320,
                     display: 'flex',
-                    justifyContent: 'end'
+                    border: 5,
+                    borderColor: 'black',
+                    borderRadius: '5px',
+
                 }}>
 
                     <Box
                         sx={{
                             display: 'flex',
+                            flexDirection: { xs: 'column', md: 'row' },
                             height: 320,
 
                         }}
@@ -126,12 +130,13 @@ const ReviewShowTotal = () => {
                         <Button
                             sx={{
                                 backgroundColor: 'lightgray',
-                                opacity: .5
+                                opacity: .5,
+                                display: { xs: 'none', sm: 'block' }
                             }}
                             onClick={deCrease}><ArrowBackIosNewIcon /></Button >
 
                         <SwipeableViews
-                            axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+                            axis='x'
                             index={value}
                             onChangeIndex={handleChangeIndex}
                         >
@@ -148,7 +153,8 @@ const ReviewShowTotal = () => {
                         <Button
                             sx={{
                                 backgroundColor: 'lightgray',
-                                opacity: .5
+                                opacity: .5,
+                                display: { xs: 'none', sm: 'block' }
                             }}
                             onClick={inCrease}><ArrowForwardIosIcon /></Button >
 
@@ -161,11 +167,11 @@ const ReviewShowTotal = () => {
                 <Box sx={{
                     display: 'flex',
                     justifyContent: 'center',
-                    width: '50%',
+                    width: { xs: '100%', md: '50%' },
                     height: 400,
                     backgroundImage: `url(${glamourbackground})`,
                     backgroundRepeat: 'no-repeat',
-                    backgroundSize: '400px 400px',
+                    backgroundSize: { xs: '100% 400px', md: '50% 400px' },
                     backgroundPosition: 'right',
 
                 }}>

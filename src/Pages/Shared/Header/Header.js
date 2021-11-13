@@ -37,8 +37,8 @@ const Header = (props) => {
                 <Box
                     sx={{
                         position: 'absolute',
-                        left: 50,
-                        height: 130,
+                        left: {xs: 0, md: 50 },
+                        height: { xs: 75, md: 130 },
                     }}
                 >
                     <img
