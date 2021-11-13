@@ -91,7 +91,11 @@ const ReviewShowTotal = () => {
 
 
                 <Typography
-                    style={{ fontFamily: 'Passions Conflict, cursive' }}
+                    sx={{ 
+                        fontFamily: 'Passions Conflict, cursive' ,
+                    fontSize: { xs: '2.5rem', md:'6rem' }
+
+                }}
                     variant='h1'>
                     What our Customers Say About Us
                 </Typography>

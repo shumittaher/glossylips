@@ -4,6 +4,7 @@ import useAuth from '../../../hooks/useAuth'
 import { Link } from 'react-router-dom'
 import { Box } from '@mui/system'
 import logo from '../../../images/designpics/logo.png'
+import { HashLink } from 'react-router-hash-link';
 
 
 const Header = (props) => {
@@ -31,15 +32,15 @@ const Header = (props) => {
                     height: 75,
                     backgroundImage: 'linear-gradient(to top right, #e3b3e8, #e8b3c4, #d5b3e8)',
                     display: 'flex',
-                    justifyContent: 'center',
+                    justifyContent: { xs: 'right', md: 'center' },
                 }}
             >
                 {props.children}
 
                 <Box
                     sx={{
-                        position: 'absolute',
-                        left: { xs: 0, md: 50 },
+                        position: { xs: 'static', md: 'absolute' },
+                        left: 25,
                         height: { xs: 75, md: 130 },
                     }}
                 >
@@ -57,7 +58,6 @@ const Header = (props) => {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-
                 }}>
 
                     <Link style={linkStyle} to='/home'>
@@ -66,6 +66,9 @@ const Header = (props) => {
                     <Link style={linkStyle} to='/explore'>
                         <Typography display="block" sx={linkTextStyle}>Explore</Typography>
                     </Link>
+                    <HashLink style={linkStyle} to='/home#about'>
+                        <Typography display="block" sx={linkTextStyle}>About</Typography>
+                    </HashLink>
 
                 </Box>
             </Box>

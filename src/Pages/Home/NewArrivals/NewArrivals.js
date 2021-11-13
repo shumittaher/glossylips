@@ -26,8 +26,10 @@ const NewArrivals = () => {
                 }}
             >
                 <Typography
-                    style={{
-                        fontFamily: 'Passions Conflict, cursive', color: "purple"
+                    sx={{
+                        fontFamily: 'Passions Conflict, cursive', color: "purple",
+                        fontSize: { xs: '3rem', md:'6rem' }
+
                     }}
                     variant='h1'>
                     Check out our exciting new arrivals!
