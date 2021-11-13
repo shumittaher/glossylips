@@ -14,6 +14,8 @@ const Header = (props) => {
         padding: '12px'
     }
     const linkTextStyle = {
+        fontFamily: 'Genos, sans-serif',
+        fontSize: '1.5rem'
     }
 
     return (
@@ -37,7 +39,7 @@ const Header = (props) => {
                 <Box
                     sx={{
                         position: 'absolute',
-                        left: {xs: 0, md: 50 },
+                        left: { xs: 0, md: 50 },
                         height: { xs: 75, md: 130 },
                     }}
                 >

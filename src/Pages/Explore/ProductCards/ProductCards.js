@@ -31,70 +31,85 @@ const ProductCards = ({ product }) => {
 
             <Box sx={{
                 display: 'flex',
-                height: 170
+                height: 170,
             }}>
 
                 <CardContent sx={{
                     width: '70%',
                 }}>
 
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography
+                        sx={{
+                            fontFamily: 'Architects Daughter, cursive'
+                        }}
+
+                        variant="h5" component="div">
                         {productTitle?.toUpperCase()}
                     </Typography>
 
                     <Box sx={{
                         display: 'flex',
-                        mt: 2
+                        mt: 1, alignItems: 'center'
+
                     }}>
                         <Typography
                             sx={{
+                                ml: 5,
+                                mr: 2,
                                 fontWeight: 600,
-                                width: 120
+                                fontFamily: 'Genos, sans-serif'
                             }}
-                            align='left' variant="button" display="inline" gutterBottom>
+                            align='left' variant="h6" display="inline" >
                             Brand:
                         </Typography>
 
                         <Typography sx={{
                         }}
-                            align='left' variant="button" display="inline" gutterBottom>
+                            align='left' variant="button" display="inline" >
                             {brand}
                         </Typography>
                     </Box>
                     <Box sx={{
                         display: 'flex',
+                        alignItems: 'center'
 
                     }}>
                         <Typography
                             sx={{
+                                ml: 5,
+                                mr: 2,
                                 fontWeight: 600,
-                                width: 120
+                                fontFamily: 'Genos, sans-serif',
                             }}
-                            align='left' variant="button" display="inline" gutterBottom>
+                            align='left' variant="h6" display="inline" >
                             Type:
                         </Typography>
 
                         <Typography sx={{
+
                         }}
-                            align='left' variant="button" display="inline" gutterBottom>
+                            align='left' variant="button" display="inline" >
                             {type}
                         </Typography>
                     </Box>
                     <Box sx={{
                         display: 'flex',
+                        alignItems: 'center'
                     }}>
                         <Typography
                             sx={{
+                                ml: 5,
+                                mr: 2,
                                 fontWeight: 600,
-                                width: 120
+                                fontFamily: 'Genos, sans-serif'
                             }}
-                            align='left' variant="button" display="inline" gutterBottom>
+                            align='left' variant="h6" display="inline" >
                             Price:
                         </Typography>
 
                         <Typography sx={{
                         }}
-                            align='left' variant="button" display="inline" gutterBottom>
+                            align='left' variant="button" display="inline" >
                             BDT   {price}
                         </Typography>
 
@@ -134,11 +149,11 @@ const ProductCards = ({ product }) => {
                     <Button
                         sx={{
                             backgroundColor: 'hotpink',
-                            "&:hover": {backgroundColor: 'purple'}
+                            "&:hover": { backgroundColor: 'purple' }
                         }}
                         variant="contained" size="large">Order Now</Button>
-            </Link>
-        </CardActions>
+                </Link>
+            </CardActions>
 
         </Card >
     )

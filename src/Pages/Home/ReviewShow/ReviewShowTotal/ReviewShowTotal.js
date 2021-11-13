@@ -90,7 +90,9 @@ const ReviewShowTotal = () => {
             >
 
 
-                <Typography variant='h3' gutterBottom>
+                <Typography
+                    style={{ fontFamily: 'Passions Conflict, cursive' }}
+                    variant='h1'>
                     What our Customers Say About Us
                 </Typography>
             </Box>

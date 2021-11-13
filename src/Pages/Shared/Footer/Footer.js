@@ -8,6 +8,7 @@ const Footer = () => {
 
         <Box id="about"
             sx={{
+
                 py: 10,
                 backgroundImage: 'linear-gradient(to top right, #e3b3e8, #e8b3c4, #d5b3e8)',
                 color: 'white',
@@ -26,10 +27,15 @@ const Footer = () => {
                     sx={{
                         display: 'flex',
                         flexDirection: 'column',
-                        fontWeight: 'bold'
+                        fontWeight: 'bold',
                     }}
                 >
-                    <Typography variant='h3'>ABOUT US</Typography>
+                    <Typography
+                        sx={{
+                            color: 'purple'
+                        }}
+
+                        variant='h3'>ABOUT US</Typography>
 
                     <img
                         style={{
@@ -58,30 +64,44 @@ const Footer = () => {
                             baseClassName="fab" className="fa-twitter-square" />
                     </Box>
                     <Typography
+
                     >
-                        Business Number: <span className="text-white"> + 88 0183464849 </span><br />
+                        Business Number:
+                        <span style={{
+                            color: 'purple',
+                            fontWeight: 'bold'
+                        }}
+                        > + 88 0183464849 </span><br />
                         3131 Gulshan Ave. Dhaka, Bangladesh <br />
-                        Complaints/Enquiries: (Email) glossy@lips.com
+                        Complaints/Enquiries: (Email) <span style={{
+                            color: 'purple',
+                            fontWeight: 'bold'
+                        }}>
+                            glossy@lips.com
+                        </span>
                     </Typography>
                     <br />
                     <Divider />
                     <br />
                 </Box>
                 <Box
+                  
                     sx={{
                         display: 'flex',
                         flexGrow: 1,
-                        fontWeight: 'bold',
                         justifyContent: 'space-evenly'
                     }}>
                     <Box
                         sx={{
                             display: 'flex',
                             flexDirection: 'column',
-                            fontWeight: 'bold',
-                            textAlign: 'left'
+                            textAlign: 'left',
                         }}>
-                        <Typography >OTHER</Typography>
+                        <Typography   sx={{
+                        fontFamily: 'Genos, sans-serif',
+                        fontSize: '1.5rem',
+                    }}
+                     gutterBottom>OTHER</Typography>
                         <Typography >Bags</Typography>
                         <Typography >Eye</Typography>
                         <Typography >Skin Care</Typography>
@@ -91,10 +111,11 @@ const Footer = () => {
                     <Box sx={{
                         display: 'flex',
                         flexDirection: 'column',
-                        fontWeight: 'bold',
                         textAlign: 'left'
                     }}>
-                        <Typography >SUPPORT</Typography>
+                        <Typography sx={{
+                        fontFamily: 'Genos, sans-serif',
+                        fontSize: '1.5rem', }} gutterBottom>SUPPORT</Typography>
                         <Typography >Account</Typography>
                         <Typography >Legal</Typography>
                         <Typography >Contact</Typography>
@@ -104,10 +125,11 @@ const Footer = () => {
                     <Box sx={{
                         display: 'flex',
                         flexDirection: 'column',
-                        fontWeight: 'bold',
                         textAlign: 'left'
                     }}>
-                        <Typography >USEFUL PAGES</Typography>
+                        <Typography sx={{
+                        fontFamily: 'Genos, sans-serif',
+                        fontSize: '1.5rem', }} gutterBottom>USEFUL PAGES</Typography>
                         <Typography >Deals</Typography>
                         <Typography >FAQs</Typography>
                         <Typography >Why Choose Us</Typography>

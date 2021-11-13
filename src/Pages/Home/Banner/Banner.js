@@ -32,12 +32,13 @@ const Banner = () => {
                     height: { xs: '40vh', sm: '80vh' },
 
                 }}>
+
+                    
                     <img
                         style={{
                             objectFit: 'cover',
                             width: '100%',
                             height: '100%',
-
                         }}
                         src={imageArray[bannerImage]} alt="" />
                 </Box>
@@ -52,9 +53,18 @@ const Banner = () => {
                 }}
             >
 
-                <Typography variant="h6">Sensual Lips are just a click away</Typography>
+                <Typography
+                    style={{
+                        fontFamily: 'Passions Conflict, cursive'
+                    }}
+                    variant="h3">Sensual Lips are just a click away</Typography>
 
-                <Typography variant="h3" gutterBottom> With Glossy Lips products</Typography>
+                <Typography
+                    style={{
+                        fontFamily: 'Passions Conflict, cursive',
+                        color: "purple"
+                    }}
+                    variant="h1"> With Glossy Lips products</Typography>
 
                 <Link
                     style={{

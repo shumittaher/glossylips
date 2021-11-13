@@ -25,7 +25,11 @@ const NewArrivals = () => {
                     py: 5,
                 }}
             >
-                <Typography variant='h3' gutterBottom>
+                <Typography
+                    style={{
+                        fontFamily: 'Passions Conflict, cursive', color: "purple"
+                    }}
+                    variant='h1'>
                     Check out our exciting new arrivals!
                 </Typography>
             </Box>

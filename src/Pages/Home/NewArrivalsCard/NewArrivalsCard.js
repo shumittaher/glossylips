@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import serverLocation from './../../../ServerLocation/serverlocation';
-import { Paper, Typography } from '@mui/material/';
+import { Paper, Typography, Divider } from '@mui/material/';
 import newarrivalspackgroundwave from '../../../images/designpics/newarrivalspackgroundwave.png'
 import { Box } from '@mui/system';
 
@@ -39,8 +39,9 @@ const NewArrivalsCard = ({ itemID }) => {
 
                 <Typography
                     sx={{
+                        color: "purple",
+                        fontFamily: 'Genos, sans-serif'
 
-                        color: 'white'
                     }}
                     variant='h5'>
                     Exciting New Arrival!
@@ -81,12 +82,13 @@ const NewArrivalsCard = ({ itemID }) => {
                     >
                         <Typography
                             sx={{
-                                color: 'white'
+                                color: 'white',
+                                fontFamily: 'Architects Daughter, cursive'
                             }}
-                            variant='h5'>
+                            variant='h4'>
                             {newArrivalItem?.productTitle?.toUpperCase()}
                         </Typography>
-
+                        <Divider />
                         <Box sx={{
                             display: 'flex',
                             mt: 2
@@ -94,7 +96,9 @@ const NewArrivalsCard = ({ itemID }) => {
                             <Typography
                                 sx={{
                                     fontWeight: 600,
-                                    mr: 2
+                                    mr: 2,
+                                    fontFamily: 'Genos, sans-serif'
+
                                 }}
                                 align='left' variant="body1" display="inline" gutterBottom>
                                 Brand:
@@ -113,7 +117,9 @@ const NewArrivalsCard = ({ itemID }) => {
                             <Typography
                                 sx={{
                                     fontWeight: 600,
-                                    mr: 2
+                                    mr: 2,
+                                    fontFamily: 'Genos, sans-serif'
+
                                 }}
                                 align='left' variant="body1" display="inline" gutterBottom>
                                 Type:
@@ -133,7 +139,8 @@ const NewArrivalsCard = ({ itemID }) => {
                 <Typography
                     sx={{
                         ml: 10,
-                        color: 'white'
+                        color: 'purple',
+                        fontFamily: 'Genos, sans-serif'
                     }}
                     variant='h6'>
                     Our product will <br /> make you shine!
