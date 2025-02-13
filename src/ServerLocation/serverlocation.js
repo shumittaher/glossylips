@@ -1,4 +1,6 @@
 
-const serverLocation = 'https://limitless-refuge-84714.herokuapp.com/'
+// const serverLocation = 'http://localhost:5000/'
+const serverLocation = 'https://glossylips-server.onrender.com/'
+
 
 export default serverLocation

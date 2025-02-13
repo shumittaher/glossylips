@@ -8,7 +8,7 @@ const NewArrivals = () => {
 
 
 
-    const newArrivalsProducts = ['618bba3a70a0f4d5143df9fb', '618bba3a70a0f4d5143df9fa']
+    const newArrivalsProducts = ['67adc834e59ca80c0113a719', '67adcc4a305447cebc5a3696']
 
 
 
@@ -50,6 +50,7 @@ const NewArrivals = () => {
 
                     {
                         newArrivalsProducts.map(itemID => <Grid
+                            key={itemID} 
                             item xs={12} md={6}>
                             <NewArrivalsCard itemID={itemID} />
 

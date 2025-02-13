@@ -28,6 +28,7 @@ const useFirebase = () => {
                     displayName,
                 }).then(() => {
                 }).catch((error) => {
+                    console.log(error)
                 });
                 history.push('/')
             })

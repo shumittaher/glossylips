@@ -25,7 +25,7 @@ const ProductCards = ({ product }) => {
                 component="img"
                 height="280"
                 image={imageLink}
-                alt="green iguana"
+                alt="card image"
             />
 
 
@@ -87,7 +87,7 @@ const ProductCards = ({ product }) => {
                         </Typography>
 
                         <Typography sx={{
-fontFamily: 'Architects Daughter, cursive'
+                            fontFamily: 'Architects Daughter, cursive'
                         }}
                             align='left' variant="button" display="inline" >
                             {type}

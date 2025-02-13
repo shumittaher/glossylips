@@ -6,13 +6,16 @@ import { Box } from '@mui/system';
 
 const NewArrivalsCard = ({ itemID }) => {
 
-    const [newArrivalItem, setNewArrivalItem] = useState([])
+    const [newArrivalItem, setNewArrivalItem] = useState({})
 
     useEffect(() => {
-
+        console.log(itemID)
         fetch(`${serverLocation}products/${itemID}`)
-            .then(res => res.json())
-            .then(data => setNewArrivalItem(data))
+            .then(res => {
+                return res.json()
+            }).then(data => {
+                setNewArrivalItem(data)
+            })
 
     }, [itemID])
 
@@ -23,6 +26,7 @@ const NewArrivalsCard = ({ itemID }) => {
             display: 'flex',
             justifyContent: 'end'
         }}>
+            {newArrivalItem && Object.keys(newArrivalItem).length > 0 && (
             <Paper elevation={24}
                 sx={{
                     width: 360,
@@ -46,6 +50,8 @@ const NewArrivalsCard = ({ itemID }) => {
                     variant='h5'>
                     Exciting New Arrival!
                 </Typography>
+
+                
                 <Box
                     sx={{
                         display: 'flex'
@@ -70,7 +76,7 @@ const NewArrivalsCard = ({ itemID }) => {
                                 objectFit: 'cover',
                                 opacity: '.8'
                             }}
-                            src={newArrivalItem.imageLink} alt='' />
+                            src={newArrivalItem?.imageLink} alt='' />
                     </Box>
 
                     <Box
@@ -138,6 +144,7 @@ const NewArrivalsCard = ({ itemID }) => {
                     </Box>
 
                 </Box>
+                
                 <Typography
                     sx={{
                         ml: 10,
@@ -149,6 +156,7 @@ const NewArrivalsCard = ({ itemID }) => {
                 </Typography>
 
             </Paper >
+            )}
         </Box>
     )
 }
